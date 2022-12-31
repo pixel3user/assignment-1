@@ -62,7 +62,7 @@ function App() {
             <span onClick={() => setdropdown1Visibility(prev => !prev)} className='mx-3 font-semibold'>Dropdown</span>
               {
                 dropdown1Visibility && (
-                  <div className="z-10 w-48 bg-white border-2 mx-1 rounded shadow-md">
+                  <div className="absolute mt-7 z-10 w-48 bg-white border-2 mx-1 rounded shadow-md">
                     <ul className="p-3 text-sm text-gray-700">
                       <li>
                         <div className="flex items-center p-2 rounded">
@@ -115,7 +115,7 @@ function App() {
               <span>2</span></span>
               {
                 dropdown2Visibility && (
-                  <div className="z-10 w-48 bg-white border-2 mx-1 rounded shadow-md">
+                  <div className="absolute mt-7 z-10 w-48 bg-white border-2 mx-1 rounded shadow-md">
                     <ul className="p-3 text-sm text-gray-700">
                       <li>
                         <div className="flex items-center p-2 rounded">
