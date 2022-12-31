@@ -56,7 +56,7 @@ function App() {
       </header>
       <div className='md:px-28'>
 
-        <div className='flex flex-row overflow-x-auto py-2 md:border-y-0 border-y-2 border-black'>
+        <div className='flex flex-row overflow-x-auto scrollbar-hide py-2 md:border-y-0 border-y-2 border-black'>
           
           <div className='flex flex-col'>
             <span onClick={() => setdropdown1Visibility(prev => !prev)} className='mx-3 font-semibold'>Dropdown</span>
@@ -108,6 +108,7 @@ function App() {
             <span>-</span>
             <span>5</span>
           </span>
+
           <div className='flex flex-col'>
             <span onClick={() => setdropdown2Visibility(prev => !prev)} className='mx-3 font-semibold flex flex-row'>
               <span>Dropdown</span>
@@ -115,31 +116,58 @@ function App() {
               <span>2</span></span>
               {
                 dropdown2Visibility && (
-                  <div className="absolute mt-7 z-10 w-48 bg-white border-2 mx-1 rounded shadow-md">
-                    <ul className="p-3 text-sm text-gray-700">
-                      <li>
-                        <div className="flex items-center p-2 rounded">
-                          <input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 " />
-                          <label className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Option 1</label>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="flex items-center p-2 rounded">
+                  <>
+                    <div className="absolute hidden md:block mt-7 z-10 w-48 bg-white border-2 mx-1 rounded shadow-md">
+                      <ul className="p-3 text-sm text-gray-700">
+                        <li>
+                          <div className="flex items-center p-2 rounded">
                             <input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 " />
-                            <label className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Option 2</label>
+                            <label className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Option 1</label>
                           </div>
-                      </li>
-                      <li>
-                        <div className="flex items-center p-2 rounded">
-                          <input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 " />
-                          <label className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Option 3</label>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                        </li>
+                        <li>
+                          <div className="flex items-center p-2 rounded">
+                              <input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 " />
+                              <label className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Option 2</label>
+                            </div>
+                        </li>
+                        <li>
+                          <div className="flex items-center p-2 rounded">
+                            <input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 " />
+                            <label className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Option 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="absolute right-0 md:hidden mt-7 z-10 w-48 bg-white border-2 mx-1 rounded shadow-md">
+                      <ul className="p-3 text-sm text-gray-700">
+                        <li>
+                          <div className="flex items-center p-2 rounded">
+                            <input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 " />
+                            <label className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Option 1</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="flex items-center p-2 rounded">
+                              <input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 " />
+                              <label className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Option 2</label>
+                            </div>
+                        </li>
+                        <li>
+                          <div className="flex items-center p-2 rounded">
+                            <input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 " />
+                            <label className="ml-2 w-full text-sm font-medium text-gray-900 rounded dark:text-gray-300">Option 3</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </>
                 )
               }
           </div>
+
+          
+
         </div>
 
         <div className='flex items-center justify-center my-9 mx-6 bg-[#d9d9d9] h-52 md:mx-0 md:rounded-md md:w-[40%] md:border-2 md:border-gray-500 md:bg-white md:shadow-md md:shadow-gray-400 '>
